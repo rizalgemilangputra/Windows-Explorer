@@ -1,0 +1,26 @@
+{
+  "name": "windows-explorer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "turbo dev",
+    "dev:frontend": "cd apps/frontend && bun run dev",
+    "dev:backend": "cd apps/backend && bun run dev",
+    "dev:parallel": "concurrently \"bun run dev:backend\" \"bun run dev:frontend\"",
+    "build": "turbo build",
+    "start": "turbo start",
+    "lint": "turbo lint"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "turbo": "^2.5.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "packageManager": "bun@1.2.8",
+  "workspaces": [
+    "apps/*"
+  ]
+}
